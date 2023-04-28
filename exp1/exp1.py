@@ -17,7 +17,7 @@ w2 = tf.Variable(0.1, dtype=tf.float32)
 w3 = tf.Variable(0.1, dtype=tf.float32)
 
 n1 = x1 * w1
-n2 = x2 * w3
+n2 = x2 * w2
 n3 = x2 * w3
 
 y = n1 + n2 + n3
