@@ -82,18 +82,8 @@ for i in range(roundCount):
         if j == (rowCount - 1):
             print("i:%d, loss:%10.10f, avgLoss:%10.10f" % (i, lossT, lossSum / (rowCount + 1)))
             if os.path.exists("save.txt"):
-                os.remove("save.txt")                                    
-                print("saving...")
+                os.remove("save.txt")
                 tf.train.Saver().save(sess, save_path=trainResultPath)
-
-
-
-
-
-
-
-
-
 
 print(sess.run([y, loss], feed_dict={x: [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                      yTrain: [1, 0, 0]}))
@@ -108,6 +98,3 @@ result = input("Would you like to save? (y/n)")
 if result == "y":
     print("saving...")
     tf.train.Saver().save(sess, save_path=trainResultPath)
-
-
-
